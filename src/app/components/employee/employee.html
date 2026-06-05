@@ -1,0 +1,29 @@
+<div class="employee-container">
+
+<h1>Employee Directory</h1>
+
+<input
+type="text"
+placeholder="Search Employee">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Salary</th>
+</tr>
+
+<tr *ngFor="let emp of employees">
+
+<td>{{emp.id}}</td>
+<td>{{emp.name}}</td>
+<td>{{emp.department}}</td>
+<td>₹{{emp.salary}}</td>
+
+</tr>
+
+</table>
+
+</div>

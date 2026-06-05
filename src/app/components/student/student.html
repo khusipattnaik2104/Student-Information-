@@ -1,0 +1,75 @@
+<div class="student-container">
+
+    <h1>🎓 Student Management System</h1>
+
+    <div class="form-section">
+
+        <input
+        type="text"
+        placeholder="Student Name"
+        [(ngModel)]="studentName">
+
+        <input
+        type="email"
+        placeholder="Student Email"
+        [(ngModel)]="studentEmail">
+
+        <input
+        type="text"
+        placeholder="Course"
+        [(ngModel)]="studentCourse">
+
+        <button (click)="addStudent()">
+            Add Student
+        </button>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        placeholder="Search Student">
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr *ngFor="let student of students">
+
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.course}}</td>
+
+            <td>
+
+                <button
+                class="delete-btn"
+                (click)="deleteStudent(student.id)">
+                    Delete
+                </button>
+
+            </td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

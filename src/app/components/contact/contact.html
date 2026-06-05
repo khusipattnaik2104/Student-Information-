@@ -1,0 +1,30 @@
+<div class="contact-container">
+
+  <div class="contact-card">
+
+    <h1>📞 Contact Us</h1>
+
+    <input
+    type="text"
+    placeholder="Enter Name"
+    [(ngModel)]="name">
+
+    <input
+    type="email"
+    placeholder="Enter Email"
+    [(ngModel)]="email">
+
+    <textarea
+    rows="5"
+    placeholder="Your Message"
+    [(ngModel)]="message">
+    </textarea>
+
+    <button
+    (click)="sendMessage()">
+      Send Message
+    </button>
+
+  </div>
+
+</div>
